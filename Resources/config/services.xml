@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="easyrdf.static.service.class">Conjecto\EasyRdfBundle\Service\StaticService</parameter>
+        <parameter key="easyrdf.namespace.class">EasyRdf_Namespace</parameter>
+        <parameter key="easyrdf.type_mapper.class">EasyRdf_TypeMapper</parameter>
+        <parameter key="easyrdf.sparql.connection.class">EasyRdf_Sparql_Client</parameter>
+    </parameters>
+
+    <services>
+        <!-- static services  -->
+        <service id="easyrdf.namespace" class="%easyrdf.static.service.class%">
+            <argument>%easyrdf.namespace.class%</argument>
+            <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+        </service>
+        <service id="easyrdf.type_mapper" class="%easyrdf.static.service.class%" >
+            <argument>%easyrdf.type_mapper.class%</argument>
+            <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+        </service>
+        <!-- sparql endpoints -->
+        <service id="easyrdf.sparql.connection" class="%easyrdf.sparql.connection.class%" />
+    </services>
+
+</container>
