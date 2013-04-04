@@ -1,0 +1,30 @@
+{
+    "name":         "conjecto/easyrdf-bundle",
+    "description":  "This bundle provides an integration of the EasyRdf library",
+    "keywords":     ["rdf"],
+    "type":         "symfony-bundle",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":     "Conjecto",
+            "homepage": "http://www.conjecto.com"
+        },
+        {
+            "name":     "Blaise de Carné",
+            "email":    "blaise@conjecto.com"
+        }
+    ],
+    "require":      {
+        "easyrdf/easyrdf": "@dev"
+    },
+    "autoload":     {
+        "psr-0": { "Conjecto\\EasyRdfBundle": "" }
+    },
+    "target-dir": "Conjecto/EasyRdfBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
