@@ -1,6 +1,6 @@
 <?php
 
-namespace Conjecto\EasyRdfBundle\DependencyInjection;
+namespace Conjecto\Bundle\EasyRdfBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

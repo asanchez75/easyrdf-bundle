@@ -1,10 +1,10 @@
 <?php
 
-namespace Conjecto\EasyRdfBundle;
+namespace Conjecto\Bundle\EasyRdfBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Conjecto\EasyrdfBundle\DependencyInjection\Compiler\RegisterNamespacesPass;
+use Conjecto\Bundle\EasyRdfBundle\DependencyInjection\Compiler\RegisterNamespacesPass;
 
 class EasyRdfBundle extends Bundle
 {

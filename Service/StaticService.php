@@ -3,7 +3,7 @@
  * Auteur: Blaise de Carné - blaise@concretis.com
  */
 
-namespace Conjecto\EasyRdfBundle\Service;
+namespace Conjecto\Bundle\EasyRdfBundle\Service;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 
