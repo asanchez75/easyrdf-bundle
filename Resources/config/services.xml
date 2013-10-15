@@ -6,12 +6,15 @@
 
     <parameters>
         <parameter key="easyrdf.static.service.class">Conjecto\Bundle\EasyRdfBundle\Service\StaticService</parameter>
+        <parameter key="easyrdf.serializer.class">Conjecto\Bundle\EasyRdfBundle\Serializer\Serializer</parameter>
         <parameter key="easyrdf.namespace.class">EasyRdf_Namespace</parameter>
         <parameter key="easyrdf.type_mapper.class">EasyRdf_TypeMapper</parameter>
         <parameter key="easyrdf.sparql.connection.class">EasyRdf_Sparql_Client</parameter>
     </parameters>
 
     <services>
+        <!-- serilizer  -->
+        <service id="easyrdf.serializer" class="%easyrdf.serializer.class%" ></service>
         <!-- static services  -->
         <service id="easyrdf.namespace" class="%easyrdf.static.service.class%">
             <argument>%easyrdf.namespace.class%</argument>
