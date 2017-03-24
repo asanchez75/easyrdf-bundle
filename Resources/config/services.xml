@@ -25,7 +25,13 @@
             <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
         </service>
         <!-- sparql endpoints -->
-        <service id="easyrdf.sparql.connection" class="%easyrdf.sparql.connection.class%" />
+        <service id="easyrdf.sparql.connection" class="%easyrdf.sparql.connection.class%" >
+            <!-- sparql_endpoint% is a parameter defined in app/config/config.yml-->
+            <!-- for example  -->
+            <!-- parameters:
+             sparql_endpoint: http://localhost:8890/sparql -->
+            <argument>%sparql_endpoint%</argument>
+        </service>
     </services>
 
 </container>

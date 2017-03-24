@@ -18,13 +18,11 @@
         "easyrdf/easyrdf": "@dev"
     },
     "autoload":     {
-        "psr-0": { "Conjecto\\Bundle\\EasyRdfBundle": "" }
+        "psr-4": { "Conjecto\\Bundle\\EasyRdfBundle\\": "" }
     },
-    "target-dir": "Conjecto/Bundle/EasyRdfBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
